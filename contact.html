@@ -31,11 +31,11 @@
 			<!-- TODO: add an input to choose the nature of the query -->
 			<form>
 				<label for="name">Name</label>
-				<input name="name">
+				<input name="name" maxlength="60">
 				<label for="email">Email</label>
-				<input name="email">
+				<input name="email" type="email">
 				<label for="message">Message</label>
-				<textarea name="message"></textarea>
+				<textarea name="message" maxlength="1000"></textarea>
 				<button>Send</button>
 			</form>
 			<p id="form-response"></p>

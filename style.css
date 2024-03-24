@@ -1,11 +1,10 @@
-@media (prefers-color-scheme: light) {
-	:root {
-		--page-bg: white;
-		--page-bg-img: url("img/bg-light.png");
-		--text-color: black;
-		--box-bg: #eee;
-		--box-border: #aaa;
-	}
+/* default light theme */
+:root {
+	--page-bg: white;
+	--page-bg-img: url("img/bg-light.png");
+	--text-color: black;
+	--box-bg: #eee;
+	--box-border: #aaa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +25,7 @@ body {
 }
 
 .box {
-	max-width: 33%;
+	max-width: 75%;
 	padding: 15px;
 	background: var(--box-bg);
 	border: 2px solid var(--box-border);

@@ -1,0 +1,35 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		--page-bg: white;
+		--page-bg-img: url("img/bg-light.png");
+		--text-color: black;
+		--box-bg: #eee;
+		--box-border: #aaa;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--page-bg: #1a1a1a;
+		--page-bg-img: url("img/bg-dark.png");
+		--text-color: white;
+		--box-bg: #333;
+		--box-border: #aaa;
+	}
+}
+
+body {
+	font-family: sans-serif;
+	color: var(--text-color);
+	background: var(--page-bg);
+	background-image: var(--page-bg-img)
+}
+
+.box {
+	max-width: 33%;
+	padding: 15px;
+	background: var(--box-bg);
+	border: 2px solid var(--box-border);
+	border-radius: 5px;
+	margin: auto;
+}

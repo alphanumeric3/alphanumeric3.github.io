@@ -1,10 +1,14 @@
-/* default light theme */
+/* default light theme.
+sorry if it looks convoluted, the variables are to reduce repetition of rules! */
 :root {
 	--page-bg: white;
 	--page-bg-img: url("img/bg-light.png");
 	--text-color: black;
 	--box-bg: #eee;
 	--box-border: #aaa;
+	--link-color: #1836a8;
+	--link-hover-color: #1646db;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +18,18 @@
 		--text-color: white;
 		--box-bg: #333;
 		--box-border: #aaa;
+		--link-color: #adc1ff;
+		--link-hover-color: #dbe4ff;
 	}
+}
+
+a {
+	color: var(--link-color);
+	transition-duration: 0.15s;
+}
+
+a:hover {
+	color: var(--link-hover-color);
 }
 
 body {

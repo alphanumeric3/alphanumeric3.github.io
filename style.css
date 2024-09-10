@@ -4,7 +4,7 @@ sorry if it looks convoluted, the variables are to reduce repetition of rules! *
 	--page-bg: white;
 	--page-bg-img: url("img/bg-light.png");
 	--text-color: black;
-	--box-bg: #eee;
+	--box-bg: #f7f7f7;
 	--box-border: #aaa;
 	--link-color: #1836a8;
 	--link-hover-color: #1646db;

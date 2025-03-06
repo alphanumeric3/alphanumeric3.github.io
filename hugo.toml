@@ -1,0 +1,25 @@
+baseURL = 'https://alphanumeric3.github.io/'
+languageCode = 'en-gb'
+title = "alphanumeric3's website"
+theme = 'an3'
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Blog'
+pageRef = '/blog'
+weight = 20
+
+# Maybe I'll get some tags first. :)
+# [[menus.main]]
+# name = 'Tags'
+# pageRef = '/tags'
+# weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

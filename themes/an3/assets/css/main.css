@@ -2,25 +2,44 @@
 sorry if it looks convoluted, the variables are to reduce repetition of rules! */
 :root {
 	--page-bg: white;
-	--page-bg-img: url("img/bg-light.png");
+	--page-bg-img: url("/img/bg-light.png");
 	--text-color: black;
-	--box-bg: #f7f7f7;
-	--box-border: #aaa;
+	--body-bg: #f7f7f7;
+	--body-border: #aaa;
 	--link-color: #1836a8;
 	--link-hover-color: #1646db;
-
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--page-bg: #1a1a1a;
-		--page-bg-img: url("img/bg-dark.png");
+		--page-bg-img: url("/img/bg-dark.png");
 		--text-color: white;
-		--box-bg: #333;
-		--box-border: #aaa;
+		--body-bg: #333;
+		--body-border: #aaa;
 		--link-color: #adc1ff;
 		--link-hover-color: #dbe4ff;
 	}
+}
+
+html {
+	background: var(--page-bg-img) var(--body-bg);
+}
+
+body {
+	font-family: sans-serif;
+	color: var(--text-color);
+	background: var(--body-bg);
+	max-width: 75%;
+	padding: 15px;
+	border: 2px solid var(--body-border);
+	border-radius: 5px;
+	margin: auto;
+}
+
+nav ul li {
+	display: inline;
+	text-decoration: none;
 }
 
 a {
@@ -30,20 +49,4 @@ a {
 
 a:hover {
 	color: var(--link-hover-color);
-}
-
-body {
-	font-family: sans-serif;
-	color: var(--text-color);
-	background: var(--page-bg);
-	background-image: var(--page-bg-img)
-}
-
-.box {
-	max-width: 75%;
-	padding: 15px;
-	background: var(--box-bg);
-	border: 2px solid var(--box-border);
-	border-radius: 5px;
-	margin: auto;
 }

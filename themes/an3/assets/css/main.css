@@ -10,6 +10,7 @@ sorry if it looks convoluted, the variables are to reduce repetition of rules! *
 	--link-hover-color: #1646db;
 }
 
+/* dark theme */
 @media (prefers-color-scheme: dark) {
 	:root {
 		--page-bg: #1a1a1a;
@@ -35,6 +36,10 @@ body {
 	border: 2px solid var(--body-border);
 	border-radius: 5px;
 	margin: auto;
+}
+
+nav ul {
+	padding-left: 0;
 }
 
 nav ul li {

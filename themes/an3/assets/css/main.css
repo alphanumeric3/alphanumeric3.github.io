@@ -56,3 +56,8 @@ a {
 a:hover {
 	color: var(--link-hover-color);
 }
+
+pre {
+	padding: 2px;
+	overflow: scroll;
+}

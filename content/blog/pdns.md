@@ -75,7 +75,7 @@ an3     3600    IN      SOA     a.misconfigured.dns.server.invalid hostmaster.an
 ```
 
 (**Note:** using made-up TLDs on your network runs the risk of ICANN _actually_ allowing said TLD to be registered.
-If you want to do this full-time on your LAN, consider a [reserved name]() or a domain you own. TODO: make the link)
+If you want to do this full-time on your LAN, with the guaranteee of no conflicts, consider buying a domain or using a reserved name like [.home.arpa](https://datatracker.ietf.org/doc/html/rfc8375))
 
 The zone is working!
 

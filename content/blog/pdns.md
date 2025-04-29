@@ -74,8 +74,7 @@ an3     3600    IN      NS      ns1.an3
 an3     3600    IN      SOA     a.misconfigured.dns.server.invalid hostmaster.an3 0 10800 3600 604800 3600
 ```
 
-(**Note:** using made-up TLDs on your network runs the risk of ICANN _actually_ allowing said TLD to be registered.
-If you want to do this full-time on your LAN, with the guaranteee of no conflicts, consider buying a domain or using a reserved name like [.home.arpa](https://datatracker.ietf.org/doc/html/rfc8375))
+(**Note:** while I doubt my made up TLD will be registered for the global internet, it could still happen. Buying a domain or using a reserved name like [.home.arpa](https://datatracker.ietf.org/doc/html/rfc8375) is a safer idea.)
 
 The zone is working!
 
@@ -86,8 +85,7 @@ ns1.an3.
 
 However, there are two problems. 
 
-The SOA (Start of Authority) record is wrong and says the primary is `a.misconfigured.dns.server.invalid`. If this was a nameserver on
-the real internet, DNS resolvers wouldn't know where to make queries.
+The SOA (Start of Authority) record is wrong and says the primary is `a.misconfigured.dns.server.invalid`.
 
 This is the default content and needs to be corrected with `pdnsutil replace-rrset`:
 

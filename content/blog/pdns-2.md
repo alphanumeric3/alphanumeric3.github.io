@@ -10,7 +10,7 @@ But that doesn't mean other virtual machines will suddenly start using it for `.
 
 dnsmasq's configuration is very easy, so I looked at `/var/lib/libvirt/dnsmasq/irl-lab.conf`:
 
-```conf
+```txt
 ##WARNING:  THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
 ##OVERWRITTEN AND LOST.  Changes to this configuration should be made using:
 ##    virsh net-edit irl-lab

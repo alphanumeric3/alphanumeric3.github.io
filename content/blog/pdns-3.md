@@ -122,7 +122,7 @@ Great!
 I use libvirt for virtualisation, which uses dnsmasq as a DHCP and DNS server. dnsmasq is only set to use the _primary_ for domains on
 `.an3`. So if the primary goes down for some reason, DNS will break for the whole virtual network:
 
-```
+```sh
 $ sudo virsh destroy pdns
 Domain 'pdns' destroyed
 $ dig version.bind ch txt @192.168.122.1 +short
@@ -159,3 +159,12 @@ $ dig ns1.an3 @192.168.122.1 +short
 ```
 
 Although there is a timeout on the very first DNS query for `an3` (since I took the primary down), queries after work fine.
+
+## Next steps
+
+After this, I'll start automating setup of PowerDNS itself and _also_ automate making DNS records when I run an Ansible playbook
+(for example, the playbook for `service` would make `A` records for `service.an3`).
+
+I could also try VRRP with Keepalived, so multiple servers can use one IP address. It's overkill here but still fun.
+
+Thanks for reading!

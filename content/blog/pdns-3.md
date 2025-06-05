@@ -2,6 +2,7 @@
 title = 'PowerDNS part 3: setting up the secondary'
 date = 2025-05-27T22:25:39+01:00
 draft = false
+summary = "Manually setting up a second nameserver"
 +++
 
 It has been a short while since I last said I'd add a secondary server to my virtual PowerDNS setup.

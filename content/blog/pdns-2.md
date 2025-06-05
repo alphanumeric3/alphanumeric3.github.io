@@ -1,7 +1,7 @@
 +++
 title = 'PowerDNS part 2: getting libvirt to use it'
 date = 2025-03-30T20:56:21+01:00
-summary = ""
+summary = "How to use dnsmasq's `server` option in a libvirt network"
 +++
 
 As I detailed [recently](/blog/pdns.md), I have authoritative DNS running inside a virtual network.

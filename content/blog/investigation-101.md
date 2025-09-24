@@ -1,6 +1,7 @@
 +++
 title = 'My go-tos when looking at a site'
 date = 2025-09-21T01:21:16+01:00
+summary = 'Using crt.sh & Censys to discover infrastructure'
 +++
 
 While I don't write about the results often, I often try to explore what infrastructure is behind a website.

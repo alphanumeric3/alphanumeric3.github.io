@@ -1,7 +1,7 @@
 +++
-title = 'Trying to avoid talking to Poke'
+title = 'Automating Poke without texting it once'
 date = 2025-09-23T23:42:27+01:00
-summary = 'Getting one email from Poke without a single text'
+summary = 'By modifying default automations, you can put Poke to work with a browser and curl!'
 +++
 
 I'll skip the sign up.

@@ -2,6 +2,7 @@
 title = 'Automating Poke without texting it once'
 date = 2025-09-23T23:42:27+01:00
 summary = 'By modifying default automations, you can put Poke to work with a browser and curl!'
+draft = false
 +++
 
 I'll skip the sign up.
@@ -10,15 +11,15 @@ I'll skip the sign up.
 
 After signing up and connecting my Gmail account to Poke, I realised I couldn't do much from the web version of Poke because it makes you use Google Messages first. Unless you want to, say, add an MCP connection or make an API key.
 
-But if I find any other parts of the site, will that 'Get Access' button stop me?
+But knowing where other parts of the site are lets me navigate without having to start a subscription.
 
 ![Some of the paths in the webapp](/img/poke/image.png)
 
-The `/automations` page looks interesting. Automations let Poke act on a regular basis, or on incoming emails. But Poke is still determined to get me to message in order to make a custom automation:
+I went to `/automations`. Automations let Poke act on a regular basis, or on incoming emails. But the frontend is still determined to get me to message in order to make a custom automation:
 
 ![The automations page](/img/poke/image-1.png)
 
-Instead, let's go to the gallery and see how automations are found and added.
+Instead, let's see if we can use templates from the automation gallery.
 
 ## The automations gallery
 
@@ -49,7 +50,7 @@ When you open the gallery, it makes a request to `/api/v1/automation-gallery`, r
 ]
 ```
 
-The `condition` and `action` are plain text instructions to the LLM. If they were sent by the client, it would be incredibly useful.
+The `condition` and `action` are plain text instructions to the LLM. If I had control of these, it would get the job done.
 
 When you add a trigger it makes a `POST` request to `/api/v1/triggers/add-default` with the following body:
 
@@ -102,7 +103,7 @@ When you change it from "Runs automatically" to "Ask me each time", it sends a `
 
 Which responds with the updated automation.
 
-Do you notice it? `permissions` in the request body is on the same level as `permissions` in the automation objects seen earlier. So it's reasonable to assume that Poke's backend may blindly merge the request body with the automation. Let's try!
+Do you notice it? `permissions` in the request body is on the same level as `permissions` in the automation objects seen earlier. So it's reasonable to assume that Poke's backend _may_ blindly merge the request body with the automation. Let's try!
 
 ```sh
 curl -H "Authorization: $TOKEN" https://poke.com/api/v1/triggers/e73b9126-2d02-4cb8-a904-e5ea3909f9e2 -X PUT \
@@ -133,5 +134,14 @@ It worked after an hour, because I messed up the cron syntax and didn't realise 
 ![The first email from Poke](/img/poke/image-3.png)
 
 After temporarily tweaking the automation to send every single minute (`* * * * *`), I can confirm this works. You can automate Poke without haggling.
+
+## Reporting to Poke
+
+I kind of blundered by publishing this post, then unpublishing it a few minutes later, _then_ emailing support.
+
+It turns out that the reason this thing worked is that you used to be able to set up triggers before onboarding. Now it's simpler and throws you
+straight into adding your email/phone number.
+
+Also, they're giving me a gift card for Poke swag :)
 
 Thanks for reading!
